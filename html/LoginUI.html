@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <a class="hiddenanchor" id="toregister"></a>
+    <a class="hiddenanchor" id="tologin"></a>
+
+    <div id="wrapper">
+        <div id="login" class="animate_form">
+            <form action="" autocomplete="on">
+                <center>
+                    <h1>Log in</h1>
+                    <p>
+                        <label for="username" class="uname" data-icon="u">Your Username</label>
+                        <input id="username" name="username" required="required" type="text" placeholder="Username" />
+                    </p>
+
+                    <p>
+                        <label for="password" class="pword" data-icon="u">Password</label>
+                        <input id="password" name="password" required="required" type="password"
+                            placeholder="e.g xsDer9isd" />
+                    </p>
+
+                    <p class="keeplogin">
+                        <label for="loginkeep">Stay Logged In ?</label>
+                        <input type="checkbox" name="loginkeep" id="loginkeep" value="loginkeep" />
+                    </p>
+
+                    <p class="loginBtn">
+                        <input type="submit" value="Login" />
+                        Not a member?
+                        <a href="#tologin" class="to_register">New User</a>
+
+                    </p>
+
+                    <p class="changeToSignup">
+                       
+                    </p>
+
+                </center>
+            </form>
+
+        </div>
+
+        <div id ="register" class = "animate_form">
+            <form action = "" autocomplete="">
+                <center>
+                <h1> Sign up</h1>
+                <p>
+                    <label for ="signUpUser" class = "uname" data-icon="u">Username</label>
+                    <input id = "signUpUser" class = "signUpUser" required = "required" type="text" placeholder="signmeup2003"/>
+
+                </p>
+
+                <p>
+                    <label for ="signUpEmail" class = "email" data-icon="e">Email</label>
+                    <input id = "signUpEmail" name ="signUpEmail" required = "required" type="email" placeholder="youremail@hotmail.com"/>
+
+                </p>
+
+                <p>
+                    <label for ="psswrdSignUp" class = "upassword" data-icon="p">Password</label>
+                    <input id ="psswrdSignUp" name = "psswrdSignUp" required="required" type="password" placeholder="e.g sDxjkw1012"/>
+
+                </p>
+
+                <p>
+                    <label for ="psswrdSignUpConfirm" class = "upassword" data-icon="p">Please Confirm Your Password</label>
+                    <input id ="psswrdSignUpConfirm" name = "psswrdSignUpConfirm" required="required" type = "password" placeholder="e.g sDxjkw1012"/>
+                </p>
+
+                <p class="registerBtn">
+                        <input type="submit" value="Register" />
+                        Already a member?
+                        <a href="#toregister" class="to_register">Login </a>
+
+                </p>
+
+
+
+
+                </center>
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>
