@@ -14,28 +14,78 @@
             for LoginUI in app.html
         -->
     <style>
-        #login {
-            position: absolute;
-            /* Specifies the type of positioning method used for an element (static, relative, absolute or fixed)*/
-            top: 0px;
-            width: 80%;
-            padding: 18px 6% 60px 6%;
-            /*An element's padding is the space between its content and its border.
+       #login{
+    position: absolute; /* Specifies the type of positioning method used for an element (static, relative, absolute or fixed)*/
+    top: 0px;
+    width: 80%;
+    padding: 18px 6% 60px 6%; /*An element's padding is the space between its content and its border.
     (order is top right bottom left)  */
-            margin: 0 0 35px 0;
-            background: rgba(241, 241, 235, 0.993);
-            border: 2px solid rgba(255, 164, 164);
-            /*border-size border-style border-color */
-            box-shadow:
-                /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
-                0pt 2px 5px rgba(138, 71, 100, 0.6),
-                0px 0px 8px 5px rgba(226, 208, 220, 0.6) inset;
-            border-radius: 5px;
-        }
+    margin: 0 0 35px 0;
+    background: rgb(247, 247, 247);
+    border: 2px solid rgba(255, 164, 164); /*border-size border-style border-color */
+    box-shadow: /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
+        0pt 2px 5px rgba(138, 71, 100, 0.6),
+        0px 0px 8px 5px rgba(226, 208, 220, 0.6) inset;
+    border-radius: 5px;
+}
 
-        #login {
-            z-index: 22;
-        }
+#login{
+    z-index: 22;
+}
+
+/**** general text styling ****/
+#wrapper h1{
+	font-size: 48px;
+	color: rgb(6, 106, 117);
+	padding: 2px 0 10px 0;
+	font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+/** For the moment only webkit supports the background-clip:text; */
+#wrapper h1{
+	background: 
+	-webkit-repeating-linear-gradient(-45deg, 
+		rgb(18, 83, 93) , 
+		rgb(18, 83, 93) 20px,
+		rgb(64, 111, 118) 20px,
+		rgb(64, 111, 118) 40px,
+		rgb(18, 83, 93) 40px);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+
+#wrapper h1:after{
+	content:' ';
+	display:block;
+	width:100%;
+	height:2px;
+	margin-top:10px;
+	background: 
+		linear-gradient(left,  
+			rgba(147,184,189,0) 0%,
+			rgba(147,184,189,0.8) 20%,
+			rgba(147,184,189,1) 53%,
+			rgba(147,184,189,0.8) 79%,
+			rgba(147,184,189,0) 100%); 
+}
+/**** advanced input styling ****/
+/* placeholder */
+::-webkit-input-placeholder  { 
+	color: rgba(231, 141, 141, 0.548); 
+	font-style: italic;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder{ 
+	color: rgba(231, 141, 141, 0.747);
+	font-style: italic;
+} 
+input {
+  outline: none;
+}
+
     </style>
 </head>
 
@@ -45,9 +95,9 @@
 
     <div id="wrapper">
         <div id="login" class="animate_form">
-            <form action="" autocomplete="on">
+            <form action="/user_login" method="POST">
                 <center>
-                    <h1>Log in</h1>
+                    <h1>MBT-i</h1>
                     <p>
                         <label for="username" class="uname" data-icon="u">Your Username</label>
                         <input id="username" name="username" required="required" type="text" placeholder="Username" />

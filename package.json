@@ -1,7 +1,7 @@
 {
   "name": "mbti",
   "version": "1.0.0",
-  "description": "",
+  "description": "First of all what is What is [MBTI](https://www.myersbriggs.org/my-mbti-personality-type/mbti-basics/home.htm?bhcp=1)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/Stefy-M/MBT-i#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "index": "^0.4.0",
+    "index.js": "0.0.3",
     "morgan": "^1.9.1",
     "mysql": "^2.16.0"
   }
