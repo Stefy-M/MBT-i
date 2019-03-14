@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Stefy-M/MBT-i/issues"
   },
-  "homepage": "https://github.com/Stefy-M/MBT-i#readme"
+  "homepage": "https://github.com/Stefy-M/MBT-i#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0"
+  }
 }

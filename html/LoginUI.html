@@ -9,8 +9,33 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
+    <!--
+            For some reason the include method injection works for CSS but 
+            for LoginUI in app.html
+        -->
     <style>
-        
+        #login {
+            position: absolute;
+            /* Specifies the type of positioning method used for an element (static, relative, absolute or fixed)*/
+            top: 0px;
+            width: 80%;
+            padding: 18px 6% 60px 6%;
+            /*An element's padding is the space between its content and its border.
+    (order is top right bottom left)  */
+            margin: 0 0 35px 0;
+            background: rgba(241, 241, 235, 0.993);
+            border: 2px solid rgba(255, 164, 164);
+            /*border-size border-style border-color */
+            box-shadow:
+                /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
+                0pt 2px 5px rgba(138, 71, 100, 0.6),
+                0px 0px 8px 5px rgba(226, 208, 220, 0.6) inset;
+            border-radius: 5px;
+        }
+
+        #login {
+            z-index: 22;
+        }
     </style>
 </head>
 
@@ -47,7 +72,7 @@
                     </p>
 
                     <p class="changeToSignup">
-                       
+
                     </p>
 
                 </center>
@@ -55,39 +80,44 @@
 
         </div>
 
-        <div id ="register" class = "animate_form">
-            <form action = "" autocomplete="">
+        <div id="register" class="animate_form">
+            <form action="" autocomplete="">
                 <center>
-                <h1> Sign up</h1>
-                <p>
-                    <label for ="signUpUser" class = "uname" data-icon="u">Username</label>
-                    <input id = "signUpUser" class = "signUpUser" required = "required" type="text" placeholder="signmeup2003"/>
+                    <h1> Sign up</h1>
+                    <p>
+                        <label for="signUpUser" class="uname" data-icon="u">Username</label>
+                        <input id="signUpUser" class="signUpUser" required="required" type="text"
+                            placeholder="signmeup2003" />
 
-                </p>
+                    </p>
 
-                <p>
-                    <label for ="signUpEmail" class = "email" data-icon="e">Email</label>
-                    <input id = "signUpEmail" name ="signUpEmail" required = "required" type="email" placeholder="youremail@hotmail.com"/>
+                    <p>
+                        <label for="signUpEmail" class="email" data-icon="e">Email</label>
+                        <input id="signUpEmail" name="signUpEmail" required="required" type="email"
+                            placeholder="youremail@hotmail.com" />
 
-                </p>
+                    </p>
 
-                <p>
-                    <label for ="psswrdSignUp" class = "upassword" data-icon="p">Password</label>
-                    <input id ="psswrdSignUp" name = "psswrdSignUp" required="required" type="password" placeholder="e.g sDxjkw1012"/>
+                    <p>
+                        <label for="psswrdSignUp" class="upassword" data-icon="p">Password</label>
+                        <input id="psswrdSignUp" name="psswrdSignUp" required="required" type="password"
+                            placeholder="e.g sDxjkw1012" />
 
-                </p>
+                    </p>
 
-                <p>
-                    <label for ="psswrdSignUpConfirm" class = "upassword" data-icon="p">Please Confirm Your Password</label>
-                    <input id ="psswrdSignUpConfirm" name = "psswrdSignUpConfirm" required="required" type = "password" placeholder="e.g sDxjkw1012"/>
-                </p>
+                    <p>
+                        <label for="psswrdSignUpConfirm" class="upassword" data-icon="p">Please Confirm Your
+                            Password</label>
+                        <input id="psswrdSignUpConfirm" name="psswrdSignUpConfirm" required="required" type="password"
+                            placeholder="e.g sDxjkw1012" />
+                    </p>
 
-                <p class="registerBtn">
+                    <p class="registerBtn">
                         <input type="submit" value="Register" />
                         Already a member?
                         <a href="#toregister" class="to_register">Login </a>
 
-                </p>
+                    </p>
 
 
 
