@@ -5,6 +5,7 @@ const app = express()
 const morgan = require('morgan')
 const mysql = require('mysql')
 const bodyParser =require('body-parser')
+const path = require('path')
 
 app.use(express.static(__dirname+ '/html'))
 
@@ -17,7 +18,8 @@ app.use(morgan('short'))
 
 app.get("/", (request,response)=>{
     console.log("Responding to root route")
-    response.send("Hello from root")
+    //response.send("Hello from root")
+    console.log(response.sendFile(path.join(__dirname+'/html/LoginUI.html')))
 
 })
 
@@ -52,6 +54,7 @@ app.post('/user_login', (req,res)=>{
         }
 
         console.log(results)
+        //res.redirect('http://google.com')
 
         res.end()
 

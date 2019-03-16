@@ -8,83 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/loginCSS.css" />
 
     <!--
             For some reason the include method injection works for CSS but 
             for LoginUI in app.html
         -->
     <style>
-       #login{
-    position: absolute; /* Specifies the type of positioning method used for an element (static, relative, absolute or fixed)*/
-    top: 0px;
-    width: 80%;
-    padding: 18px 6% 60px 6%; /*An element's padding is the space between its content and its border.
-    (order is top right bottom left)  */
-    margin: 0 0 35px 0;
-    background: rgb(247, 247, 247);
-    border: 2px solid rgba(255, 164, 164); /*border-size border-style border-color */
-    box-shadow: /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
-        0pt 2px 5px rgba(138, 71, 100, 0.6),
-        0px 0px 8px 5px rgba(226, 208, 220, 0.6) inset;
-    border-radius: 5px;
-}
-
-#login{
-    z-index: 22;
-}
-
-/**** general text styling ****/
-#wrapper h1{
-	font-size: 48px;
-	color: rgb(6, 106, 117);
-	padding: 2px 0 10px 0;
-	font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
-	font-weight: bold;
-	text-align: center;
-	padding-bottom: 30px;
-}
-
-/** For the moment only webkit supports the background-clip:text; */
-#wrapper h1{
-	background: 
-	-webkit-repeating-linear-gradient(-45deg, 
-		rgb(18, 83, 93) , 
-		rgb(18, 83, 93) 20px,
-		rgb(64, 111, 118) 20px,
-		rgb(64, 111, 118) 40px,
-		rgb(18, 83, 93) 40px);
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
-}
-
-#wrapper h1:after{
-	content:' ';
-	display:block;
-	width:100%;
-	height:2px;
-	margin-top:10px;
-	background: 
-		linear-gradient(left,  
-			rgba(147,184,189,0) 0%,
-			rgba(147,184,189,0.8) 20%,
-			rgba(147,184,189,1) 53%,
-			rgba(147,184,189,0.8) 79%,
-			rgba(147,184,189,0) 100%); 
-}
-/**** advanced input styling ****/
-/* placeholder */
-::-webkit-input-placeholder  { 
-	color: rgba(231, 141, 141, 0.548); 
-	font-style: italic;
-}
-input:-moz-placeholder,
-textarea:-moz-placeholder{ 
-	color: rgba(231, 141, 141, 0.747);
-	font-style: italic;
-} 
-input {
-  outline: none;
-}
 
     </style>
 </head>
@@ -118,6 +48,8 @@ input {
                         <input type="submit" value="Login" />
                         Not a member?
                         <a href="#tologin" class="to_register">New User</a>
+                        <a href="" id = "aboutModalBtn" class="aboutModalBtn" onclick="aboutModal()">About MBTi</a>
+
 
                     </p>
 
@@ -177,6 +109,16 @@ input {
 
         </div>
 
+        <div id="aboutModal" class="aboutModal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+            </div>
+
+        </div>
+
 
     </div>
 
@@ -186,6 +128,23 @@ input {
 
 
     <script>
+
+        var aboutModal = document.getElementById("aboutModal");
+        var aboutModalBtn = document.getElementById("aboutModalBtn");
+
+        var close = document.getElementsByClassName("close")[0];
+
+
+        
+
+        function aboutModal(){
+            aboutModal.style.display='block';
+        }
+
+        close.onclick = function(){
+            aboutModal.style.display='none'
+        }
+
 
     </script>
 </body>
