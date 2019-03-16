@@ -65,7 +65,7 @@ app.post('/user_login', (req,res)=>{
    
 })
 
-app.get("/users", (request,response)=>{
+/*app.get("/users", (request,response)=>{
     var user1 = {fistName :"Stefon", lastName: "Martin"}
     const user2 = {fistName :"Stefy", lastName: "Mart"}
     
@@ -84,6 +84,7 @@ app.get("/users", (request,response)=>{
 
     //response.send("Nodemon autoupdates all the time")
 })
+*/
 
 
 app.listen(3003, () => {

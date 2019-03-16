@@ -6,10 +6,15 @@
     <base target="_top">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css"
+        rel="stylesheet" />
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/loginCSS.css" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--
             For some reason the include method injection works for CSS but 
             for LoginUI in app.html
@@ -48,7 +53,7 @@
                         <input type="submit" value="Login" />
                         Not a member?
                         <a href="#tologin" class="to_register">New User</a>
-                        <a href="" id = "aboutModalBtn" class="aboutModalBtn" onclick="aboutModal()">About MBTi</a>
+
 
 
                     </p>
@@ -59,6 +64,8 @@
 
                 </center>
             </form>
+            <a href="" data-toggle="modal" data-toggle="aboutModal" class="aboutModalBtn" onclick="aboutModal(); ">About
+                MBTi</a>
 
         </div>
 
@@ -112,9 +119,32 @@
         <div id="aboutModal" class="aboutModal">
 
             <!-- Modal content -->
-            <div class="modal-content">
+            <div class="aboutModal-content">
                 <span class="close">&times;</span>
-                <p>Some text in the Modal..</p>
+                <center>
+                    <h1><b>About MBT-i</b></h1>
+                    <img src="images/self.png"
+                        height="200" width="200">
+                    <p style="font-style:italic"> Version 1<br>
+                    &copy; 2019-2020 Stefon Martin. All Rights Reserved.
+                    </p>
+
+                    <p>
+                        Life is but a journey...We live and learn. This is essential to growth. I believe that our nature as human beings
+                        is to give back to the world we were created in using our god given abilities that are externally shown through our personalities.
+                        What if there was a test that could determine who you are and what types of "powers" and contributions you can bring to society.
+                        Well there is! Although, it is soley your choice to beileve in the accuracy of a test called MBTI. Test are a great means of measurements to some and shallow
+                        to others. Some may say that this is shallow way of categorizing people and putting them in a box, a very great point. In my personal opinion
+                        it is best to take note of your results, research a bit from there. If the things you are reading do not reasonate with you
+                        you can just move on with your life. The root of MBTI stems from the cognitive functions. The cognitive functions are a conceived model by Carl Jung who is also known 
+                        for concepts like the collective unconcious, introversion and extroversion. Throught the years The concepts of the cognitive functions have been watered down mainly because
+                        it is such a broad topic to research. MBTI is indeed a watered down version for the Jungarioan philosophy but it is the most popular place for people to start and the easiest
+                        to understand. This website is suppose to be a place where users have to own profile that will provide them with informative resources based on their personality type.
+                        <br>
+                        <br>
+                        To take the test visit <a href ="https://www.16personalities.com/" target ="_blank">16personalities</a> 
+                    </p>
+                </center>
             </div>
 
         </div>
@@ -129,20 +159,25 @@
 
     <script>
 
-        var aboutModal = document.getElementById("aboutModal");
+        var aboutModalDiv = document.getElementById("aboutModal");
+
+
         var aboutModalBtn = document.getElementById("aboutModalBtn");
 
         var close = document.getElementsByClassName("close")[0];
 
+        // aboutModalDiv.style.display = 'none';
 
-        
 
-        function aboutModal(){
-            aboutModal.style.display='block';
+
+        function aboutModal() {
+
+            aboutModalDiv.style.display = 'block';
+
         }
 
-        close.onclick = function(){
-            aboutModal.style.display='none'
+        close.onclick = function () {
+            aboutModalDiv.style.display = 'none'
         }
 
 
