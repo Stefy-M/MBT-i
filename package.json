@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/Stefy-M/MBT-i#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
     "index": "^0.4.0",
     "index.js": "0.0.3",
     "morgan": "^1.9.1",
